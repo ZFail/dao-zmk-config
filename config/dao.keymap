@@ -16,8 +16,6 @@
 &lt { quick_tap_ms = <200>; };
 
 &mt { quick_tap_ms = <200>; };
-&ht_tp { quick_tap_ms = <200>; };
-
 
 / {
     chosen {
@@ -28,6 +26,32 @@
 };
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+        hhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -36,7 +60,7 @@
 &mt LGUI RBKT    &kp Q  &kp W  &kp E      &kp R            &kp T      &kp Y      &kp U           &kp I      &kp O    &kp P     &kp LBKT
 &mt LCTRL GRAVE  &kp A  &kp S  &kp D      &kp F            &kp G      &kp H      &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
 &mt LALT MINUS   &kp Z  &kp X  &kp C      &kp V            &kp B      &kp N      &kp M           &kp COMMA  &kp DOT  &kp FSLH  &mt RALT BSLH
-                               &lt 2 TAB  &ht_tp LSHFT SPACE  &lt 1 RET  &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL
+                               &lt 2 TAB  &hm LSHFT SPACE  &lt 1 RET  &lt 1 ESC  &hhm RSHFT BSPC  &lt 2 DEL
             >;
         };
 
