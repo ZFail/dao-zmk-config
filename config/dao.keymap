@@ -97,10 +97,10 @@
 
         adjust_layer {
             bindings = <
-&bootloader  &bt BT_SEL 0     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none   &kp KP_DOT  &kp KP_PLUS  &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &bootloader
-&bt BT_CLR   &bt BT_SEL 1     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none   &none       &none        &none         &none            &bt BT_SEL 2   &bt BT_CLR
-&sys_reset   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none   &none       &none        &none         &none            &bt BT_SEL 3   &sys_reset
-                                               &trans           &none            &trans  &trans      &none        &trans
+&bootloader  &bt BT_SEL 0     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK  &kp KP_DOT  &kp KP_PLUS  &kp KP_MINUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &bootloader
+&bt BT_CLR   &bt BT_SEL 1     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none           &none       &none        &none         &none            &bt BT_SEL 2   &bt BT_CLR
+&sys_reset   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none           &none       &none        &none         &none            &bt BT_SEL 3   &sys_reset
+                                               &trans           &none            &trans          &trans      &none        &trans
             >;
         };
     };
